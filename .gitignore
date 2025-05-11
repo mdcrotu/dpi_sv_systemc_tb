@@ -1,0 +1,10 @@
+
+obj/
+bin/
+*.vcd
+*.log
+*.o
+*.d
+*.dSYM/
+simv*
+.vscode/
