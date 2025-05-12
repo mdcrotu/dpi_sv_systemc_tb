@@ -1,5 +1,6 @@
 
 #include "dpi_interface.h"
+#include "svdpi.h"
 #include "systemc_model.h"
 #include <systemc>
 

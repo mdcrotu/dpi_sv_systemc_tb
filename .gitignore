@@ -1,5 +1,6 @@
 
 obj/
+obj_dir/
 bin/
 *.vcd
 *.log
@@ -8,3 +9,4 @@ bin/
 *.dSYM/
 simv*
 .vscode/
+.dvt/

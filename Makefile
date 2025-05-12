@@ -33,7 +33,8 @@ CXXFLAGS    := -std=c++17 -I. $(INCDIR) -I$(OBJ_DIR)
 LDFLAGS     := $(LIBDIR) $(SYSTEMC_LDFLAGS) $(SYSTEMC_LIBS)
 
 VERILATOR         := verilator
-VERILATOR_FLAGS   := -Wall --cc --exe --sv --build --top-module $(TOP_MODULE) --Mdir $(OBJ_DIR) -CFLAGS "$(CXXFLAGS)" -LDFLAGS "$(LDFLAGS)" $(SV_SOURCES) $(CPP_SOURCES) systemc_testbench.cpp
+#VERILATOR_FLAGS   := -Wall --cc --exe --sv --build --top-module $(TOP_MODULE) --Mdir $(OBJ_DIR) -CFLAGS "$(CXXFLAGS)" -LDFLAGS "$(LDFLAGS)" $(SV_SOURCES) $(CPP_SOURCES) systemc_testbench.cpp
+VERILATOR_FLAGS   := -sc --exe --build -j 0 $(SV_SOURCES) $(CPP_SOURCES)
 
 all: $(BIN_DIR)/simv
 
